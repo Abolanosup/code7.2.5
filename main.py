@@ -352,13 +352,13 @@ def onmessage(update,bot:ObigramClient):
             proxy_de = S5Crypto.decrypt(f'{proxy_sms}')
             bot.sendMessage(update.message.chat.id, f'🧑‍💼Decryptado:\n{proxy_de}')
             return
-        if '/user_information' in msgText:
+        if '/myuser' in msgText:
             getUser = user_info
             if getUser:
                 statInfo = infos.createStat(username,getUser,jdb.is_admin(username))
                 bot.sendMessage(update.message.chat.id,statInfo)
                 return
-        if '/zip' in msgText:
+        if '/zips' in msgText:
             getUser = user_info
             if getUser:
                 try:
@@ -415,7 +415,7 @@ def onmessage(update,bot:ObigramClient):
             except:
                 bot.sendMessage(update.message.chat.id,'❌Error en el comando❌')
             return
-        if '/tokenieyyeze_on' in msgText:
+        if '/tokenize_on' in msgText:
             try:
                 getUser = user_info
                 if getUser:
@@ -427,7 +427,7 @@ def onmessage(update,bot:ObigramClient):
             except:
                 bot.sendMessage(update.message.chat.id,'❌Error en el comando❌')
             return
-        if '/tokeniydtyze_off' in msgText:
+        if '/tokenize_off' in msgText:
             try:
                 getUser = user_info
                 if getUser:
@@ -530,7 +530,7 @@ def onmessage(update,bot:ObigramClient):
                     bot.sendMessage(update.message.chat.id,proxy)
             return
 
-        message = bot.sendMessage(update.message.chat.id,'💻Analizando💻')
+        message = bot.sendMessage(update.message.chat.id,'✌😝Analizando, si esto demora más de 3 minutos es probable que aya problemas con la cuneta, proxy o en el comandó ejecutado😕 ')
 
         thread.store('msg',message)
 
