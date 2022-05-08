@@ -371,7 +371,7 @@ def onmessage(update,bot:ObigramClient):
                 except:
                    bot.sendMessage(update.message.chat.id,'❌Error en el comando❌')    
                 return
-        if '/credential' in msgText:
+        if '/account' in msgText:
             try:
                 account = str(msgText).split(' ',2)[1].split(',')
                 user = account[0]
@@ -387,7 +387,7 @@ def onmessage(update,bot:ObigramClient):
             except:
                 bot.sendMessage(update.message.chat.id,'❌Error en el comando❌')
             return
-        if '/embed_moodle' in msgText:
+        if '/host' in msgText:
             try:
                 cmd = str(msgText).split(' ',2)
                 host = cmd[1]
@@ -530,7 +530,7 @@ def onmessage(update,bot:ObigramClient):
                     bot.sendMessage(update.message.chat.id,proxy)
             return
 
-        message = bot.sendMessage(update.message.chat.id,'✌😝Analizando, si esto demora más de 3 minutos es probable que aya problemas con la cuneta, proxy o en el comandó ejecutado😕 ')
+        message = bot.sendMessage(update.message.chat.id,'💻Analizando💻')
 
         thread.store('msg',message)
 
@@ -553,7 +553,7 @@ def onmessage(update,bot:ObigramClient):
         #          client.logout()
         #      else:
         #         bot.editMessageText(message,'❌Error y Causas🧐\n1-Revise su Cuenta\n2-Servidor Desabilitado: '+client.path)
-        elif '/storage' == msgText and user_info['cloudtype']=='moodle':
+        elif '/files' == msgText and user_info['cloudtype']=='moodle':
              proxy = ProxyCloud.parse(user_info['proxy'])
              client = MoodleClient(user_info['moodle_user'],
                                    user_info['moodle_password'],
