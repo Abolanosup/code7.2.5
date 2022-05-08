@@ -535,7 +535,7 @@ def onmessage(update,bot:ObigramClient):
         thread.store('msg',message)
 
         if '/start' in msgText:
-            start_msg = ':) Hola Panita!😃 @' + str(username)+'\n'
+            start_msg = 'Hola Panita!😃. Bievenido @' + str(username)+'\n'
             start_msg+= '🤖Gracias por contratar los servicios de RTFree_Bot. Disfrute de este bot y descargue todo lo que usted quiera. Hasta 1tb y más puede bajar :D\n'
             start_msg+= '📄Algun problema recuerde contactar con los administradores: @rockstar984 y @TuguerX'
             bot.editMessageText(message,start_msg)
