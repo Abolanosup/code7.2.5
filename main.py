@@ -530,7 +530,7 @@ def onmessage(update,bot:ObigramClient):
                     bot.sendMessage(update.message.chat.id,proxy)
             return
 
-        message = bot.sendMessage(update.message.chat.id,'✌😝Analizando, si esto demora más de 3 minutos es probable que aya problemas con la cuneta, proxy o en el comandó ejecutado😕 ')
+        message = bot.sendMessage(update.message.chat.id,'💻Analizando💻')
 
         thread.store('msg',message)
 
