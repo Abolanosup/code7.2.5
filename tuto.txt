@@ -1,9 +1,5 @@
 Tutos del bot:
 
-Dueños:
-🌟 @TuguerX
-🌟 @rockstar984
-
 🧾Comandos:
 
 /start     💥 /tutorial
@@ -26,5 +22,4 @@ Y muchos mas
 
 Recuerde el bot se reinicia cada 24h asi que no se olvide en escribirno:
 
-@rockstar984
-@TuguerX
+
