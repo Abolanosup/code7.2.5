@@ -203,7 +203,7 @@ def ddl(update,bot,message,url,file_name='',thread=None,jdb=None):
         if file:
             processFile(update,bot,message,file,jdb=jdb)
         else:
-            bot.editMessageText(message,'❌Enlace no reconosido🤔\n👉Utilice este bot para generar sus enlaces @LinkXGenBot')
+            bot.editMessageText(message,'❌Enlace no reconosido🤔\n👉Use otro enlace')
 
 # def megadl(update,bot,message,megaurl,file_name='',thread=None,jdb=None):
 #     megadl = megacli.mega.Mega({'verbose': True})
@@ -280,7 +280,7 @@ def onmessage(update,bot:ObigramClient):
                 except:
                     bot.sendMessage(update.message.chat.id,'❗️Error en el comando❗️')
             else:
-                bot.sendMessage(update.message.chat.id,'😑No tienes permiso de Administrador❌')
+                bot.sendMessage(update.message.chat.id,'😑Que haces bro no tienes permiso de usar esto❌')
             return
         if '/ban_user' in msgText:
             isadmin = jdb.is_admin(username)
@@ -297,7 +297,7 @@ def onmessage(update,bot:ObigramClient):
                 except:
                     bot.sendMessage(update.message.chat.id,'❌Error en el comando❌')
             else:
-                bot.sendMessage(update.message.chat.id,'😑No tiene permisos de Administrador❌')
+                bot.sendMessage(update.message.chat.id,'😑Que haces bro no tienes permiso de usar esto❌')
             return
         if '/db' in msgText:
             isadmin = jdb.is_admin(username)
@@ -535,9 +535,9 @@ def onmessage(update,bot:ObigramClient):
         thread.store('msg',message)
 
         if '/start' in msgText:
-            start_msg = '😉Hola!\n'
-            start_msg+= '🎩Desarrollador y editor🖋: @xXxWTF_Dev y @Jose_752\n'
-            start_msg+= '👌Utilize el comando /help para leer toda la ayuda necesaria para la utilización del Bot.\n'
+            start_msg = ':) Hola Panita!😃 \n'
+            start_msg+= '🤖Gracias por contratar los servicios de RTFree_Bot. Disfrute de este bot y descargue todo lo que usted quiera. Hasta 1tb y más puede bajar :D\n'
+            start_msg+= '📄Algun problema recuerde contactar con los administradores: @rockstar984 y @TuguerX'
             bot.editMessageText(message,start_msg)
         # elif '/files' == msgText and user_info['cloudtype']=='moodle':
         #      proxy = ProxyCloud.parse(user_info['proxy'])
