@@ -536,7 +536,7 @@ def onmessage(update,bot:ObigramClient):
 
         if '/start' in msgText:
             start_msg = 'Hola Panita!😃. Bievenido @' + str(username)+'\n'
-            start_msg = 'Disfruta de la versión 7.2.5
+            start_msg = 'Disfruta de la versión 7.2.5'\n'
             bot.editMessageText(message,start_msg)
         # elif '/files' == msgText and user_info['cloudtype']=='moodle':
         #      proxy = ProxyCloud.parse(user_info['proxy'])
